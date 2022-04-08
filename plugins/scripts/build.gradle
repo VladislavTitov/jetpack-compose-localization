@@ -1,0 +1,12 @@
+plugins {
+    id 'kotlin'
+}
+
+dependencies {
+    implementation(project(":localization:core"))
+
+    implementation("org.jetbrains.kotlin:kotlin-scripting-common:$kotlin_version")
+    implementation("org.jetbrains.kotlin:kotlin-scripting-jvm:$kotlin_version")
+    implementation("org.jetbrains.kotlin:kotlin-scripting-jvm-host:$kotlin_version")
+    implementation("org.jetbrains.kotlin:kotlin-scripting-dependencies:$kotlin_version")
+}

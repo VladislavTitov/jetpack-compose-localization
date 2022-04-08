@@ -1,11 +1,11 @@
 package com.technokratos.compose.localization.ui
 
 import java.util.Locale
-import com.technokratos.compose.localization.NonTranslatable
-import com.technokratos.compose.localization.Plural
-import com.technokratos.compose.localization.Plurals
-import com.technokratos.compose.localization.Translatable
-import com.technokratos.compose.localization.registerSupportedLocales
+import com.technokratos.localization.core.NonTranslatable
+import com.technokratos.localization.core.Plural
+import com.technokratos.localization.core.Plurals
+import com.technokratos.localization.core.Translatable
+import com.technokratos.localization.core.registerSupportedLocales
 
 val RUSSIAN = Locale("ru")
 val TATAR = Locale("tt")

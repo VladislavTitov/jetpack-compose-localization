@@ -1,3 +1,8 @@
 rootProject.name = "jetpack-compose-localization-preview"
 include ':sample'
-include ':localization'
+include ':localization:core'
+include ':localization:compose'
+include ':sample-multimodule:locales'
+include ':sample-multimodule:locales-override'
+include ':sample-multimodule:app'
+include ':plugins:scripts'

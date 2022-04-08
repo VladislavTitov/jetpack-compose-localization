@@ -38,6 +38,8 @@ import com.technokratos.compose.localization.ui.localesHeader
 import com.technokratos.compose.localization.ui.nonTrans
 import com.technokratos.compose.localization.ui.plural
 import com.technokratos.compose.localization.ui.supportedLocalesNow
+import com.technokratos.localization.compose.Localization
+import com.technokratos.localization.compose.Vocabulary
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

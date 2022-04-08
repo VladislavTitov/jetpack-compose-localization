@@ -1,0 +1,26 @@
+l10n plugin:
+
+  - tasks:
+      - generate l10n.txt file:
+          actions:
+            - execute l10n kts scripts:
+                - call [Translatable|NonTranslatable|Plural] function
+                - collect all strings
+                - write l10n.txt file
+                - place in intermediates/l10n folder
+      - generate L10n.kt:
+          actions:
+            - generate properties for each item in l10n.txt
+            - place to generated/source folder
+      - merge l10n.txt:
+          properties:
+            - before mergeJavaResource task
+          actions:
+            - find l10n.txt files in dependencies:
+                - ${variantName}RuntimeClasspath.getIncoming().getDependencies()
+                - get l10n.txt file:
+                    - if project - "${buildDir}/intermediates/java_res/${variant.buildType}/${variant.flavor}/out/l10n.txt"
+                    - else       - configuration.files(dep) -> zipTree() -> getFile("l10n.txt")
+            - plus generated l10n.txt file
+            - merge
+            - place in intermediates/java_res/out folder
